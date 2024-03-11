@@ -9,7 +9,9 @@ import IconYoutube from './assets/icon-youtube.svg';
 const SplineApp = () => {
     return ( 
         <Wrapper>
-            <Spline className="spline" scene="https://prod.spline.design/kjaJ-sG-JGkdAFas/scene.splinecode" /> 
+            {/* <SplineContainer> */}
+                <Spline className="spline" scene="https://prod.spline.design/kjaJ-sG-JGkdAFas/scene.splinecode" /> 
+            {/* </SplineContainer> */}
             <Content>
                 <Menu>
                     <li><img src={Logo} alt="Logo"/></li>
@@ -39,22 +41,48 @@ const Wrapper = styled.div`
     font-size: 16px;
     color: white;
     position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     .spline {
-        position: absolute;
-        margin: 0;
-        top: 0;
-        right: 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        @media (max-width: 1060px) {
+            transform: scale(0.8) translateX(200px);
+        }
+        @media (max-width: 800px) {
+            transform: scale(0.7) translateX(300px);
+        }
+        @media (max-width: 600px) {
+            transform: scale(0.5) translateX(400px);
+        }
+        @media (max-width: 450px) {
+            transform: scale(0.45) translateX(400px);
+        }
     }
 `
+
 const Content = styled.div`
     position: absolute;
     top: 30px;
     z-index: 10;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
     gap: 80px;
+
+    @media (max-width: 1024px) {
+        gap: 40px;        
+    }
 
     h1 {
         font-family: 'Spline Sans Mono', monospace;
@@ -62,6 +90,18 @@ const Content = styled.div`
         font-size: 70px;
         margin: 0;
         max-width: 500px;
+
+        @media (max-width: 1024px) {
+            font-size: 60px;
+            max-width: 400px;
+        }
+        @media (max-width: 800px) {
+            font-size: 40px;
+            max-width: 300px;
+        }
+        @media (max-width: 600px) {
+            padding-top: 250px
+        }
     }
 
     p {
@@ -99,6 +139,10 @@ const Content = styled.div`
     p, 
     button {
         margin: 0 30px 0 100px;
+
+        @media (max-width: 1024px) {
+            margin: 0 30px;
+        }
     }
 `
 
@@ -109,23 +153,37 @@ const Menu = styled.ul`
     margin: 0 30px 0 100px;
     padding: 0;
 
+    @media (max-width: 1024px) {
+        margin: 0 30px;
+    }
+
     li {
         list-style: none;
         margin: 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-        padding: 8px 20px;
-        border: 1px solid rgba(255,255,255, 0);
-        border-radius: 14px;
-        transition: 0.5s;
-
-        &:hover {
-            border: 1px solid rgba(255,255,255,0.2);
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 20px;
+            border: 1px solid rgba(255,255,255, 0);
+            border-radius: 14px;
+            transition: 0.5s;
+    
+            &:hover {
+                border: 1px solid rgba(255,255,255,0.2);
+            }
         }
     }
+
+    @media (max-width: 800px) {
+        justify-content: space-between;
+        li:nth-child(2),
+        li:nth-child(3),
+        li:nth-child(4),
+        li:nth-child(5) {
+            display: none;
+        }
+    }
+
 `;
 
 const Social = styled.div`
@@ -147,5 +205,9 @@ const Social = styled.div`
             #1306dd 65.86%,
             #aa0eb2 100%
         )
+    }
+
+    @media (max-width: 1024px) {
+        display: none;
     }
 `
