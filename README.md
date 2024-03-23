@@ -2,20 +2,20 @@
 
 Daccord is a website developed using Vite (build tool) & Spline (3D Design tool). This project aims to showcase the integration of React components with Spline's 3D scenes to provide users with immersive & interactive experience.
 
-This project is deployed to : https://nephydecode.github.io/daccord-spline-react/
+This project is deployed to : https://nephykoda.github.io/daccord-spline-react/
 
 [Spline Design](https://my.spline.design/untitled-d85cd63a822dbe56b09c0ed25a9fcb0c/)
 
 | Hovering Spline UI Elements                      | Orbitting the 3D Scene                           |
 |--------------------------------------------------|--------------------------------------------------|
-| ![](https://github.com/nephydecode/daccord-spline-react/blob/main/src/assets/daccord-hover.gif)| ![](https://github.com/nephydecode/daccord-spline-react/blob/main/src/assets/daccord-orbit.gif)|
+| ![](https://github.com/nephykoda/daccord-spline-react/blob/main/src/assets/daccord-hover.gif)| ![](https://github.com/nephykoda/daccord-spline-react/blob/main/src/assets/daccord-orbit.gif)|
 
 ## Installation
 
 To run this project locally, follow the following steps:
 
 1. Clone the repository:
-```git clone https://github.com/nephydecode/daccord-spline-react.git```
+```git clone https://github.com/nephykoda/daccord-spline-react.git```
 
 2. Navigate to project directory:
 ```cd daccord-spline-react```
